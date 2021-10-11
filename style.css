@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&family=Oxygen:wght@300&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Hind Siliguri', sans-serif;
+}
+
+/*Nitido*/
+
+body
+{
+	background-color: #fff;
+	background-image: url(https://images.squarespace-cdn.com/content/v1/572625bee707eb7c1fd6a5eb/1496588120749-09G11T500FG7O8XP4VJ8/Tom_Cole_Barbican1.jpg?format=750w);
+	background-repeat: repeat-x repeat-y;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.container
+{
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	min-height: 100px;
+	background: rgba(0, 0, 0, 0.0);
+	padding-top: 40px;
+	padding-bottom: 40px;
+	display: grid;
+	transition: 0.2s ease-in-out;
+	grid-template-columns: 1fr 2fr;
+}
+
+.container#blur.active
+{
+	filter: blur(7px);
+	transition: 0.2s ease-in-out;
+	pointer-events: none;
+	user-select: none;
+}
+
+#popup
+{
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 600px;
+	padding: 50px;
+	background: whitesmoke;
+	border-radius: 15px;
+	border-top: 1px solid rgba(0, 49, 71, 0.7);
+	border-left: 1px solid rgba(0, 49, 71, 0.7);
+	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+	visibility: hidden;
+	transition: 0.3s ease-in-out;
+}
+
+#popup p
+{
+	padding-bottom: 10px;
+	border-bottom: 1px solid;
+}
+
+#popup.active
+{
+	top: 50%;
+	opacity: 1;
+	visibility: visible;
+}
+
+.profile
+{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid rgba(255,255,255, 0.9);
+}
+
+.profile .imgBx
+{
+	position: relative;
+	overflow: hidden;
+}
+
+.profile .imgBx img
+{
+	border-radius: 50%;
+	transition: 0.5s ease-in-out;
+}
+
+.profile:hover .imgBx img
+{
+	box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.5);
+	border-radius: 10%;
+	height: 205px;
+	width: 205px;
+}
+
+.profile h2
+{
+	color: #fff;
+	font-size: 1.5em;
+	margin-top: 20px;
+	text-align: center;
+	line-height: 1.4em;
+}
+
+.profile span
+{
+	color: #fff;
+	font-weight: 300;
+}
+
+.info
+{
+	color: white;
+	padding-top: 20px;
+	cursor: pointer;
+}
+
+.info ul
+{
+	position: relative;
+}
+
+.info ul li
+{
+	position: relative;
+	list-style: none;
+	margin: 10px 0;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #FF7F00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.info ul li .icon
+{
+	display: inline-block;
+}
+
+.title
+{
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.title2
+{
+	font-weight: 600;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	color: #003147;
+	text-transform: uppercase;
+}
+
+p
+{
+	color: #003147;
+	letter-spacing: 1px;
+}
+
+.edu
+{
+	color: white;
+	padding-top: 20px;
+}
+
+.edu ul
+{
+	position: relative;
+}
+
+.edu ul li
+{
+	position: relative;
+	list-style: none;
+	margin: 10px 0;
+}
+
+.leng
+{
+	color: white;
+	padding-top: 20px;
+}
+
+.leng ul
+{
+	position: relative;
+}
+
+.leng ul li
+{
+	position: relative;
+	margin: 10px 0;
+}
+.leng ul li h4
+{
+	font-weight: 200;
+}
+
+.leng ul li span
+{
+	font-weight: 200;
+	letter-spacing: 3px;
+}
+
+.container .right-side
+{
+	position: relative;
+	background: rgba(0, 60, 100, 0.6);
+	overflow: hidden;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	padding: 40px;
+	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.7);
+	border-top: 1px solid rgba(255, 255, 255, 1.0);
+	border-left: 1px solid rgba(255, 255, 255, 1.0);
+}
+
+.container .right-side .profile span
+{
+	visibility: hidden;
+	color: rgba(0, 60, 100, 1.0);
+	transform: translate(-10px);
+	transition: 0.5s ease-in-out;
+	font-size: 1px;
+}
+
+.container .right-side .profile:hover span
+{
+	visibility: visible;
+	color: white;
+	transform: translate(0px);
+	transition: 0.5s ease-in-out;
+	font-size: 20px;
+}
+
+.container .left-side
+{
+	position: relative;
+	background: #fff;
+	padding: 40px;
+	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.7);
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.about .boxExp
+{
+	opacity: 0.5;
+	display: flex;
+	flex-direction: row;
+	padding: 5px;
+	font-size: 90%;
+	transition: 0.2s ease-in-out;
+}
+
+.about .boxExp:hover
+{
+	opacity: 1;
+	display: flex;
+	flex-direction: row;
+	padding: 5px;
+	font-size: 105%;
+}
+
+.about .boxExp .year_comp
+{
+	min-width: 150px;
+}
+
+.about .boxExp .text
+{
+	color:#003147;
+}
+
+.about .boxExp .year_comp h5
+{
+	color: black;
+}
+
+.about .boxExp:hover .year_comp h5
+{
+	color: #FF7F00;
+}
+
+.about ul li
+{
+	color: #003147;
+	position: relative;
+	margin: 10px 0;
+	list-style: none;
+}
+
+.about ul li:hover
+{
+	text-transform: uppercase;
+	color: #F59B00;
+	position: relative;
+	font-weight: bold;
+	list-style: inside;
+	margin: 10px 0;
+}
+
+.interest ul li
+{
+	list-style: none;
+	margin: 10px 0;
+}
+.interest .icon
+{
+	color: #FF8C00;
+}
+
+@media (max-width: 1000px)
+{
+	.container
+	{
+		margin: 10px;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.container .right-side
+	{
+		border-bottom-left-radius: 0px;
+		border-top-right-radius: 15px;
+	}
+
+	.container .left-side
+	{
+		border-bottom-left-radius: 15px;
+		border-top-right-radius: 0px;
+	}
+}
